@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Here are all the cocktails, enjoy !! </h1>
+
+
+
+<div class="container">
+  <div class="row">
+
+    <% @cocktails.each do |cocktail| %>
+
+      <div class="col-xs-12 col-sm-4">
+        <div class="card">
+          <span class="card-bg" style="background-image:url('https://unsplash.it/600/300')"></span>
+          <span class="card-gradient"></span>
+          <span class="card-category"><%= cocktail.category %></span>
+          <span class="card-text">
+            <h2><%= cocktail.name %></h2>
+            <%= link_to 'Show', cocktail_path(cocktail), {class: "btn btn-primary"} %>
+            <%= link_to 'Add a review', new_cocktail_review_path(cocktail), {class: "btn btn-primary"} %>
+          </span>
+          <a href="#" class="card-link"></a>
+        </div>
+      </div>
+
+    <% end %>
+
+  </div>
+</div>
+
+
+
+
