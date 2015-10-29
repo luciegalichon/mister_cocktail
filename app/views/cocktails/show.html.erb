@@ -1,23 +1,20 @@
 <% content_for(:title) do %>
-  <%= @cocktail.name %> is on La Cuillere
+  <%= @cocktail.name %> is good !!
 <% end %>
 
 <h1><%= @cocktail.name %></h1>
 
 
-
 <% if @cocktail.doses.any? %>
 
 
-  <h2> Doses </h2>
+  <h2> Voilà les bons ingrédients pour un <%= @cocktail.name %> réussi. </h2>
   <ul>
     <% @cocktail.doses.each do |dose| %>
-      <li><%= dose.description %></li>
-      <li><%= dose.ingredient %></li>
+      <li><%= dose.description %> - <%=dose.ingredient.name %> </li>
     <% end %>
   </ul>
 <% end %>
 
-
+<%= link_to 'Add a Dose', new_cocktail_dose_path(@cocktail) %>
 <%= link_to 'Back', cocktails_path %>
-<%= link_to 'Add a review', new_cocktail_review_path(@cocktail), {class: "btn btn-primary"} %>

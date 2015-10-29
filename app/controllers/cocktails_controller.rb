@@ -1,9 +1,8 @@
 class CocktailsController < ApplicationController
 
    before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
-
   def index
-    @cocktails = cocktail.all
+    @cocktails = Cocktail.all
   end
 
   def show
@@ -11,7 +10,7 @@ class CocktailsController < ApplicationController
 
 
   def new
-    @cocktail = cocktail.new
+    @cocktail = Cocktail.new
   end
 
 
@@ -20,7 +19,7 @@ class CocktailsController < ApplicationController
 
 
   def create
-    @cocktail = cocktail.new(valid_attributes)
+    @cocktail = Cocktail.new(valid_attributes)
     if @cocktail.save
       redirect_to cocktail_path(@cocktail)
     else
@@ -42,24 +41,24 @@ class CocktailsController < ApplicationController
     end
   end
 
-  # DELETE /cocktails/1
-  # DELETE /cocktails/1.json
-  def destroy
-    @cocktail.destroy
-    respond_to do |format|
-      format.html { redirect_to cocktails_url, notice: 'cocktail was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  # # DELETE /cocktails/1
+  # # DELETE /cocktails/1.json
+  # def destroy
+  #   @cocktail.destroy
+  #   respond_to do |format|
+  #     format.html { redirect_to cocktails_url, notice: 'cocktail was successfully destroyed.' }
+  #     format.json { head :no_content }
+  #   end
+  # end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_cocktail
-      @cocktail = cocktail.find(params[:id])
+      @cocktail = Cocktail.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def valid_attributes
-      params.require(:cocktail).permit( :name, :address, :phone_number, :category)
+      params.require(:cocktail).permit( :name )
     end
 end
