@@ -2,19 +2,21 @@
   <div class="container navbar-wagon-container">
 
     <a href=<%=cocktails_path%>>
-      <i class="fa fa-glass"></i>
+       <%= image_tag "logo.png" %>
     </a>
+<!--     <h2>       Mister Cocktail </h2> -->
 
     <div class="navbar-wagon-pusher"></div>
 
-    <form action="" class="navbar-wagon-search hidden-xs hidden-sm">
+   <!--  <form action="" class="navbar-wagon-search hidden-xs hidden-sm">
       <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
       <button type="submit" class="navbar-wagon-search-btn">
         <i class="fa fa-search"></i>
       </button>
-    </form>
-    <hr class="hidden-xs hidden-sm">
-    <hr>
-    <%= link_to 'Post a New cocktail', new_cocktail_path , class: "navbar-wagon-item navbar-wagon-button btn" %>
+    </form> -->
+ <!--    <hr class="hidden-xs hidden-sm">   Mister Cocktail
+    <hr> -->
+    <%= link_to 'Add a cocktail', new_cocktail_path , class: "navbar-wagon-item navbar-wagon-button btn btn-orange" %>
   </div>
 </nav>
+

@@ -1,10 +1,14 @@
+<div class="banner text-center" style="background-image: url('<%= image_path "cocktails-image" %>')">
+  <div class="banner-gradient"></div>
+  <div class="banner-content">
+    <h1>Sauvegarde les meilleurs recettes de cocktail</h1>
+  </div>
+</div>
 
 
-  <p id="notice"><%= notice %></p>
-
-  <h1 class = "home_page">Here are all the cocktails, enjoy !! </h1>
-
-
+<!-- <div class="container-fluid banner_height">
+  <%= image_tag "cocktails-image.jpg", {class: "img-responsive", id: "logo"} %>
+</div> -->
 
   <div class="container">
     <div class="row">
@@ -19,13 +23,12 @@
             <span class="card-category"> Awesome cocktails </span>
             <span class="card-text">
               <h2><%= cocktail.name %></h2>
-  <!--             <h2><%= cocktail.doses %></h2> -->
-              <%= link_to 'Show', cocktail_path(cocktail), {class: "btn btn-danger"} %>
+              <%= link_to 'Voir la recette', cocktail_path(cocktail), class: "navbar-wagon-item navbar-wagon-button btn" %>
             </span>
           </div>
-        </div>
 
-      <% end %>
+        </div>
+        <% end %>
 
     </div>
   </div>
