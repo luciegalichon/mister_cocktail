@@ -36,6 +36,8 @@ gem 'figaro'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
+gem 'aws-sdk', '< 2.0'
+gem 'paperclip'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

@@ -5,6 +5,7 @@
 
 <div class = "home_page">
 <h1><%= @cocktail.name %></h1>
+<%= image_tag @cocktail.picture.url(:medium) %>
 
 
 <% if @cocktail.doses.any? %>
