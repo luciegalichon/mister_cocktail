@@ -2,6 +2,8 @@
   <%= @cocktail.name %> is good !!
 <% end %>
 
+
+<div class = "home_page">
 <h1><%= @cocktail.name %></h1>
 
 
@@ -18,3 +20,4 @@
 
 <%= link_to 'Add a Dose', new_cocktail_dose_path(@cocktail) %>
 <%= link_to 'Back', cocktails_path %>
+</div>

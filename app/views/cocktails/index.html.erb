@@ -1,31 +1,34 @@
-<p id="notice"><%= notice %></p>
-
-<h1>Here are all the cocktails, enjoy !! </h1>
 
 
+  <p id="notice"><%= notice %></p>
 
-<div class="container">
-  <div class="row">
+  <h1 class = "home_page">Here are all the cocktails, enjoy !! </h1>
 
-    <% @cocktails.each do |cocktail| %>
 
-      <div class="col-xs-12 col-sm-4">
-        <div class="card">
-          <span class="card-bg" style="background-image:url('https://unsplash.it/600/300?image=25')"></span>
-          <span class="card-gradient"></span>
-          <span class="card-category"> Awesome cocktails </span>
-          <span class="card-text">
-            <h2><%= cocktail.name %></h2>
-<!--             <h2><%= cocktail.doses %></h2> -->
-            <%= link_to 'Show', cocktail_path(cocktail), {class: "btn btn-danger"} %>
-          </span>
+
+  <div class="container">
+    <div class="row">
+
+      <% @cocktails.each do |cocktail| %>
+
+        <div class="col-xs-12 col-sm-4">
+          <div class="card">
+            <span class="card-bg" style="background-image:url('https://unsplash.it/600/300?image=25')"></span>
+            <span class="card-gradient"></span>
+            <span class="card-category"> Awesome cocktails </span>
+            <span class="card-text">
+              <h2><%= cocktail.name %></h2>
+  <!--             <h2><%= cocktail.doses %></h2> -->
+              <%= link_to 'Show', cocktail_path(cocktail), {class: "btn btn-danger"} %>
+            </span>
+          </div>
         </div>
-      </div>
 
-    <% end %>
+      <% end %>
 
+    </div>
   </div>
-</div>
+
 
 
 

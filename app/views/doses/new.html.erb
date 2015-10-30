@@ -1,12 +1,17 @@
-<h1>Add a new dose </h1>
-<!-- form_for @review, url: restaurant_reviews_path(@restaurant) do |f| -->
-<%= simple_form_for ([@cocktail, @dose]) do |f| %>
- <%= f.error_notification %>
-  <%= f.input :description %>
-  <%= f.association :ingredient, collection: Ingredient.all %>
+<div class = "home_page">
 
-  <%= f.submit %>
-<% end %>
+  <h1>Add a new dose </h1>
+<!-- form_for @review, url: restaurant_reviews_path(@restaurant) do |f| -->
+  <div class = "questionnaire">
+  <%= simple_form_for ([@cocktail, @dose]) do |f| %>
+   <%= f.error_notification %>
+    <%= f.input :description %>
+    <%= f.association :ingredient, collection: Ingredient.all %>
+
+    <%= f.submit %>
+  <% end %>
+  </div>
+</div>
 
 
 
